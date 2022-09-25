@@ -1,0 +1,72 @@
+
+.page-head {
+  height: 70vh;
+ position: relative;
+  background-color: $color-primary;
+  position : relative;
+    clip-path : polygon( 0 0 , 100% 0 , 100% 85% , 0 100%);
+}
+.logo-box {
+  position: absolute;
+  top: $logo-top;
+  left: $logo-left;
+  @include respond(phone)
+  {
+    top:1.5rem;
+    left:1.5rem;
+  }
+  animation-name: logo-transition-on-load;
+  animation-duration: 2s;
+}
+
+.firstName {
+  animation-name: firstName-TtoB;
+  animation-duration: 2s;
+ 
+  
+ 
+ 
+}
+.lastName {
+  animation-name: lastName-BtoT;
+  animation-duration: 2s;
+  
+  
+  
+ 
+}
+
+.content-about-me
+{
+  background-color: $color-match-jacket;
+  color:$color-match-table;
+  padding: 2rem;
+  border-radius : 0.5rem;
+  margin-bottom: $gutter-vertical-skills;
+  line-height: 130%;
+  font-size:2.9rem;
+}
+
+.name-of-degree
+{
+  font-family: 'Jost', sans-serif;
+  font-weight : bold;
+  letter-spacing: $letter-space-medium;
+  font-size: 3.5rem;
+}
+
+.institute , .passing
+{
+  font-family: 'Secular One', sans-serif;
+  word-spacing: 0.2rem;
+  font-size : 3rem;
+}
+.passing
+{
+  font-style: italic;
+}
+.location-vector
+{
+  width:6rem;
+  padding-left : 3rem;
+}

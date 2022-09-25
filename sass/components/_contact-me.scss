@@ -1,0 +1,24 @@
+.links-section
+{
+  max-width: 114rem;
+  border : 0.1rem white solid;
+}
+
+.portfolio-img
+{
+  width : 20rem;
+  
+  @include respond(tab-port)
+  {
+    width :18rem;  
+  }
+  @include respond(phone)
+  {
+    width :16rem;
+  }
+}
+
+.img-logo-class
+{
+  height:12rem;
+}

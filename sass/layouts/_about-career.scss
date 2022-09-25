@@ -1,0 +1,99 @@
+@import "../abstract/mixins";
+.about-career
+{
+  
+    /*Miscc Setings*/
+    color:$color-white;
+    font-size : 3rem;
+    position: relative;
+    background-color: $color-match-jacket;
+    padding-bottom: $section-bottom-space;
+    height: auto;
+    margin-top:-20rem;
+    z-index: -1;
+    padding-top : 15rem;
+    padding-bottom : 30rem; //becayuse we have pust -20 rem top
+    @include respond(phone)
+    {
+      padding-bottom: 55rem !important;
+    }
+    @include respond(tab-port)
+    {
+      padding-bottom: 45rem;
+    }
+    @include respond(tab-land)
+    {
+      padding-bottom: 40rem;
+    }
+    .my-education
+    {
+      position: relative;
+        .my-education-header
+        {
+           font-weight: bolder;
+           font-family: 'Secular One', sans-serif;
+           letter-spacing: 0.5rem;
+           left : 50%;
+            text-align: center;
+            padding : 2.5rem;
+            font-size: 7rem;
+            @include respond(phone)
+            {
+              font-size:5rem;
+            }
+            color:$color-tertiary;
+            
+
+        }
+        .education-detail
+        {
+          padding: 0 15rem 5rem 15rem;
+          @include respond(tab-port)
+          {
+            padding : 0 1rem 3rem 1rem;
+            margin : 0 2rem;
+          }
+          @include respond(phone)
+          {
+            padding : 0 1rem 3rem 1rem;
+           
+          }
+          display: block;
+          margin : 3rem;
+          .name-of-degree
+          {
+              color: $color-tertiary;
+              display: inline-block;
+            font-weight: bolder;
+              line-height : 5rem;
+              height: 5rem;
+          }
+          .institute-name-and-passing {
+
+            color:$color-tertiary;
+            .institute{
+               float :left;
+               padding-left: 6rem;
+            }
+            .passing
+            {
+                float:right;
+                font-size :3rem;
+            }
+              }
+              .course-description
+                {
+                margin-top : 2rem;
+                padding-left : 4rem ; padding-right : 4rem;
+                word-wrap :break-word;
+                font-family: 'Jost', sans-serif;
+                clear:both;
+                content: "";
+                
+                }
+        }
+
+    }
+
+    
+}

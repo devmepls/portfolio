@@ -1,0 +1,44 @@
+@mixin footer-style-text
+{
+    background-image: linear-gradient(to right top, #e0a433, #cfb310, #b4c200, #8cd200, #44e023);
+            display:inline-block;
+            -webkit-background-clip: text;
+            color:transparent;
+            background-clip: text;
+}
+
+/*
+big-device : above 1800px
+tab-land : 1200 px
+tab-port : upto 900px
+phone : upto 600px
+*/
+@mixin respond($parameter)
+{
+    @if $parameter == tab-land
+    {
+        @media only screen and (min-width: 56.26rem){ //1200
+            @content    
+        };
+    }
+    @if $parameter == tab-port
+    {
+        @media only screen and (min-width:37.51rem) and (max-width : 56.25em) {//900
+            @content    
+        };
+    }
+    
+    @if  $parameter == phone
+    {
+        @media only screen and (max-width : 37.5em) { //600
+            @content    
+        };
+    }
+    
+    @if $parameter == big-device
+    {
+        @media screen and (min-width : 112.5em) {
+            @content    
+        };
+    }
+}

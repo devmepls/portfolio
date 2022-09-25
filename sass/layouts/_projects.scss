@@ -1,0 +1,47 @@
+@import "../abstract/mixins";
+@import "../abstract/phone_project";
+@import "../abstract/other_project.scss";
+.my-projects
+{
+    color:WHITE;
+    background-color: $color-tertiary;
+    font-size:2.5rem;
+    position: relative;
+    height: fit-content;
+    margin-top :2.5rem;
+    //padding-bottom: 10rem;
+    padding : 0rem 5rem 10rem 5rem;
+ 
+    .project-header
+    {
+        text-align: center;
+        padding : 2.5rem 0 2.5rem 0;
+        font-weight: bolder;
+        font-family: 'Secular One', sans-serif;
+        letter-spacing: 0.5rem;
+        font-size: 7rem;
+        @include respond(phone)
+        {
+            font-size:5rem;
+        }
+        color:$color-match-jacket;
+        
+        
+    }
+    @include respond(phone)
+    {
+        @include smallDevices;
+    }
+    @include respond(tab-land)
+    {
+        @include bigDevices;
+    }
+    @include respond(tab-port)
+    {
+        @include bigDevices;
+    }
+   
+}
+
+    
+    

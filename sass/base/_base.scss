@@ -1,0 +1,53 @@
+/*Universal Selector*/
+@import "../abstract/mixins";
+*,
+*::before,
+*::after {
+  margin: 0rem;
+  padding: 0rem;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  
+  
+    /*background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;*/
+  
+ 
+
+}
+
+html {
+  
+  font-size:50%; //currently 16px
+  @include respond(tab-land)
+  {
+    font-size: 40%;
+  }
+  @include respond(tab-port)
+  {
+    font-size: 35%;
+  }
+  @include respond(phone)
+  {
+    font-size: 30%;
+  }
+  @include respond(big-device)
+  {
+    font-size:55%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  padding: 2.5rem;
+  @include respond(tab-port)
+  {
+    padding: 0;
+  }
+  @include respond(phone)
+  {
+    padding: 0;
+  }
+
+}
